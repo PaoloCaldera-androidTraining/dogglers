@@ -32,10 +32,10 @@ import com.example.dogglers.model.Dog
  */
 class DogCardViewHolder(view: View?) : RecyclerView.ViewHolder(view!!) {
     // Declare and initialize all of the list item UI components
-    val dogImage = view?.findViewById<ImageView>(R.id.list_item_image)
-    val dogName = view?.findViewById<TextView>(R.id.list_item_name)
-    val dogAge = view?.findViewById<TextView>(R.id.list_item_age)
-    val dogHobby = view?.findViewById<TextView>(R.id.list_item_hobby)
+    val dogImage = view!!.findViewById<ImageView>(R.id.list_item_image)
+    val dogName = view!!.findViewById<TextView>(R.id.list_item_name)
+    val dogAge = view!!.findViewById<TextView>(R.id.list_item_age)
+    val dogHobby = view!!.findViewById<TextView>(R.id.list_item_hobby)
 }
 
 /**
@@ -54,15 +54,17 @@ class DogCardAdapter(
         //  Use a conditional to determine the layout type and set it accordingly.
         //  if the layout variable is Layout.GRID the grid list item should be used. Otherwise the
         //  the vertical/horizontal list item should be used.
-        val layoutXml =
-            if (layout == Layout.GRID)
-                R.layout.grid_list_item
-            else
-                R.layout.vertical_horizontal_list_item
+
+        val listItemView: View
 
         // Inflate the layout
-        val listItemView = LayoutInflater.from(context)
-            .inflate(layoutXml, parent, false)
+        if (layout == Layout.GRID) {
+            listItemView = LayoutInflater.from(parent.context)
+                .inflate(R.layout.grid_list_item, parent, false)
+        } else {
+            listItemView = LayoutInflater.from(parent.context)
+                .inflate(R.layout.vertical_horizontal_list_item, parent, false)
+        }
 
         //  Null should not be passed into the view holder. This should be updated to reflect
         //  the inflated layout.
@@ -77,10 +79,10 @@ class DogCardAdapter(
         val currentListItem = dataset[position]
 
         // Set the image resource for the current dog
-        holder.dogImage?.setImageResource(currentListItem.imageResourceId)
+        holder.dogImage.setImageResource(currentListItem.imageResourceId)
 
         // Set the text for the current dog's name
-        holder.dogName?.text = currentListItem.name
+        holder.dogName.text = currentListItem.name
 
         val resources = context?.resources
 
@@ -88,13 +90,13 @@ class DogCardAdapter(
         //  R.string.dog_age string constant.
         //  Passing an argument to the string resource looks like:
         //  resources?.getString(R.string.dog_age, dog.age)
-        holder.dogAge?.text = resources?.getString(R.string.dog_age, currentListItem.age)
+        holder.dogAge.text = resources?.getString(R.string.dog_age, currentListItem.age)
 
         //  Set the text for the current dog's hobbies by passing the hobbies to the
         //  R.string.dog_hobbies string constant.
         //  Passing an argument to the string resource looks like:
         //  resources?.getString(R.string.dog_hobbies, dog.hobbies)
-        holder.dogHobby?.text =
+        holder.dogHobby.text =
             resources?.getString(R.string.dog_hobbies, currentListItem.hobbies)
     }
 }
