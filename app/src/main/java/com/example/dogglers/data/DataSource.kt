@@ -24,44 +24,42 @@ import com.example.dogglers.model.Dog
  */
 object DataSource {
 
-    val resources: Resources = Resources.getSystem()
-
     val dogs: List<Dog> = listOf(
         Dog(
             R.drawable.tzeitel,
-            resources.getString(R.string.dog_name_1),
-            resources.getString(R.string.dog_age_1),
-            resources.getString(R.string.dog_hobby_1)
+            "Tzeitel",
+            "7",
+            "sunbathing"
         ),
         Dog(
             R.drawable.leroy,
-            resources.getString(R.string.dog_name_2),
-            resources.getString(R.string.dog_age_2),
-            resources.getString(R.string.dog_hobby_2)
+            "Leroy",
+            "4",
+            "sleeping in dangerous places"
         ),
         Dog(
             R.drawable.frankie,
-            resources.getString(R.string.dog_name_3),
-            resources.getString(R.string.dog_age_3),
-            resources.getString(R.string.dog_hobby_3)
+            "Frankie",
+            "2",
+            "stealing socks"
         ),
         Dog(
             R.drawable.nox,
-            resources.getString(R.string.dog_name_4),
-            resources.getString(R.string.dog_age_4),
-            resources.getString(R.string.dog_hobby_4)
+            "Nox",
+            "8",
+            "meeting new animals"
         ),
         Dog(
             R.drawable.faye,
-            resources.getString(R.string.dog_name_5),
-            resources.getString(R.string.dog_age_5),
-            resources.getString(R.string.dog_hobby_5)
+            "Faye",
+            "8",
+            "Digging in the garden"
         ),
         Dog(
             R.drawable.bella,
-            resources.getString(R.string.dog_name_6),
-            resources.getString(R.string.dog_age_6),
-            resources.getString(R.string.dog_hobby_6)
+            "Bella",
+            "14",
+            "Chasing sea foam"
         )
     )
 }
