@@ -1,0 +1,53 @@
+<!--
+  ~ Copyright (C) 2021 The Android Open Source Project.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<resources>
+    <!-- App name -->
+    <string name="app_name">Dogglers</string>
+
+    <!-- Strings to display -->
+    <string name="dog_age">Age: %1$s</string>
+    <string name="dog_hobbies">Hobbies: %1$s</string>
+
+    <!-- Recycler view layouts -->
+    <string name="vertical">Vertical</string>
+    <string name="horizontal">Horizontal</string>
+    <string name="grid">Grid</string>
+
+    <!-- Dog names -->
+    <string name="dog_name_1">Tzeitel</string>
+    <string name="dog_name_2">Leroy</string>
+    <string name="dog_name_3">Frankie</string>
+    <string name="dog_name_4">Nox</string>
+    <string name="dog_name_5">Faye</string>
+    <string name="dog_name_6">Bella</string>
+
+    <!-- Dog ages -->
+    <string name="dog_age_1">7</string>
+    <string name="dog_age_2">4</string>
+    <string name="dog_age_3">2</string>
+    <string name="dog_age_4">8</string>
+    <string name="dog_age_5">8</string>
+    <string name="dog_age_6">14</string>
+
+    <!-- Dog hobbies -->
+    <string name="dog_hobby_1">sunbathing</string>
+    <string name="dog_hobby_2">sleeping in dangerous places</string>
+    <string name="dog_hobby_3">stealing socks</string>
+    <string name="dog_hobby_4">meeting new animals</string>
+    <string name="dog_hobby_5">digging in the garden</string>
+    <string name="dog_hobby_6">chasing sea foam</string>
+
+</resources>
